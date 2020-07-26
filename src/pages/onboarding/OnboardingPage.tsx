@@ -29,7 +29,12 @@ const OnboardingPage: FunctionComponent = () => {
       >
         Connections Welcome you to the City of Bridges.
       </Box>
-      <Button variant="contained" color="primary" fullWidth>
+      <Button
+        variant="contained"
+        color="primary"
+        fullWidth
+        onClick={handleClick}
+      >
         <Box p={1}>Let's go</Box>
       </Button>
     </Box>
