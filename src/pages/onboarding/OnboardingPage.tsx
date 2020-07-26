@@ -6,7 +6,9 @@ const OnboardingPage: FunctionComponent = () => {
   const theme = useTheme();
   const history = useHistory();
 
-  const handleClick = React.useCallback(() => {}, []);
+  const handleClick = React.useCallback(() => {
+    history.push("/home");
+  }, [history]);
 
   return (
     <Box
