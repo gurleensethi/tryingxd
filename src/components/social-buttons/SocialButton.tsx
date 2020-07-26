@@ -36,9 +36,10 @@ const SocialButton: FunctionComponent<Props> = ({ text, icon }) => {
           alignItems="center"
           py={1}
           px={0.5}
+          flex="1"
         >
           {icon}
-        </Box>{" "}
+        </Box>
         <Box>{text}</Box>
       </Box>
     </Button>
