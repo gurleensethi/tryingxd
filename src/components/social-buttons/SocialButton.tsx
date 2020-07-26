@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { Box, Button, Theme, makeStyles } from "@material-ui/core";
+import { Box, Button, Theme, makeStyles, ButtonProps } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) => {
   return {
@@ -18,11 +18,15 @@ interface Props {
   icon: React.ReactNode;
 }
 
-const SocialButton: FunctionComponent<Props> = ({ text, icon }) => {
+const SocialButton: FunctionComponent<Props & ButtonProps> = ({
+  text,
+  icon,
+  ...rest
+}) => {
   const styles = useStyles();
 
   return (
-    <Button variant="contained" className={styles.button}>
+    <Button variant="contained" className={styles.button} {...rest}>
       <Box
         borderRadius={4}
         display="flex"

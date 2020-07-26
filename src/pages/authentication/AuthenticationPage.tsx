@@ -3,6 +3,7 @@ import { Box, makeStyles } from "@material-ui/core";
 import SocialButton from "../../components/social-buttons/SocialButton";
 import EmailIcon from "../../images/email.png";
 import { grey } from "@material-ui/core/colors";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles({
   container: {},
@@ -18,6 +19,11 @@ const useStyles = makeStyles({
 
 const AuthenticationPage: FunctionComponent = () => {
   const styles = useStyles();
+  const history = useHistory();
+
+  const handleAuth = React.useCallback(() => {
+    history.push("/onboarding");
+  }, [history]);
 
   return (
     <Box
@@ -51,6 +57,7 @@ const AuthenticationPage: FunctionComponent = () => {
                 height="24px"
               />
             }
+            onClick={handleAuth}
           />
         </Box>
         <Box mb={2}>
@@ -63,6 +70,7 @@ const AuthenticationPage: FunctionComponent = () => {
                 height="24px"
               />
             }
+            onClick={handleAuth}
           />
         </Box>
         <Box mb={2}>
@@ -75,6 +83,7 @@ const AuthenticationPage: FunctionComponent = () => {
                 height="24px"
               />
             }
+            onClick={handleAuth}
           />
         </Box>
         <Box display="flex" justifyContent="center" alignItems="center" mb={2}>
@@ -88,6 +97,7 @@ const AuthenticationPage: FunctionComponent = () => {
           <SocialButton
             text="Login with Email"
             icon={<img src={EmailIcon} alt="google" height="24px" />}
+            onClick={handleAuth}
           />
         </Box>
       </Box>
