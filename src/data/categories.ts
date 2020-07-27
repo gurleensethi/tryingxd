@@ -50,6 +50,66 @@ const categories: Record<string, Category> = {
       { name: "Professional Associations" },
     ],
   },
+  "recreation": {
+    name: "Recreation",
+    image: Recreation,
+    description:
+      "Kennywood won the Favorite  Traditional Parks category in The Annual Amusements Parks and Attractions Survey.",
+    options: [
+      { name: "Parks and Trails" },
+      { name: "Fishing and Boating" },
+      { name: "Sports and Stadium" },
+      { name: "Gaming and Casinos"},
+      { name: "Live Events"},
+    ],
+  },
+  "Neighborhood": {
+    name: "Neighborhood",
+    image: Neighborhood,
+    description:
+      "Pittsburgh is ranked among top three best cities in the U.S. for first-time homethebuyers according to Lending Tree.",
+    options: [
+      { name: "Housing and Accomodation" },
+      { name: "Safety Index" },
+      { name: "Grocery Store" },
+      { name: "Shopping Malls"},
+      { name: "Food and Breweries"},
+      { name: "Community Services"},
+    ],
+  },
+  "Work-life-balance": {
+    name: "Work Life Balance",
+    image: WorkBalance,
+    description:
+      "Smartasset ranks Pittsburgh 22nd for work life balance.",
+    options: [
+      { name: "Kid's Education" },
+      { name: "Family Outings" },
+      { name: "Calculate your happiness Index" },
+    ],
+  },
+  "health-and-wellness":{
+    name: "Health and Wellness",
+    image: HealthWellness,
+    description:
+    "People for Bikes named Pittsburgh is celebrated as the 5th Best City for an active lifestyle as named by WalletHub among the top 20 cities in the United States for people on bicycles.",
+    options:[
+      { name: "Hospitals" },
+      { name: "Mental Health Centers" },
+      { name: "Meditation Centres" },
+      { name: "Fitness Centers"},
+      { name: "Exercising Groups"},
+    ],
+  },
+  "commute-and-connectivity":{
+    name: "Commute and Connectivity",
+    image: CommuteConnectivity,
+    description:
+    "People for Bikes named Pittsburgh among the top 20 cities in the United States for people on bicycles.",
+    options:[
+      { name: "Apps making commute easier" },
+    ],
+  },
 };
 
 export default categories;
