@@ -4,6 +4,7 @@ import AuthenticationPage from "./pages/authentication/AuthenticationPage";
 import { ThemeProvider, Theme, createMuiTheme } from "@material-ui/core";
 import OnboardingPage from "./pages/onboarding/OnboardingPage";
 import HomePage from "./pages/home/HomePage";
+import CategoryDetailsPage from "./pages/category-details/CategoryDetailsPage";
 
 const theme: Theme = createMuiTheme({
   spacing: 8,
@@ -17,6 +18,7 @@ const App: FunctionComponent = () => {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Switch>
+          <Route path="/category/:categoryId" component={CategoryDetailsPage} />
           <Route path="/home" component={HomePage} />
           <Route path="/onboarding" component={OnboardingPage} />
           <Route path="/" component={AuthenticationPage} />
