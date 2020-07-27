@@ -10,6 +10,8 @@ import Transit from "../images/transit.png";
 import Uber from "../images/uber.png";
 import Lyft from "../images/lyft.jpg";
 import TechCouncil from "../images/tech_council.png";
+import Stadiums from "../images/stadiums.png";
+import Steelers from "../images/steelers.jpg";
 
 export interface Category {
   name: string;
@@ -127,6 +129,7 @@ const categories: Record<string, Category> = {
   },
   "sports-and-stadiums": {
     isPrimary: false,
+    image: Stadiums,
     name: "Sports and Stadiums",
     description:
       "People for Bikes named Pittsburgh among the top 20 cities in the United States for people on bicycles.",
@@ -139,7 +142,8 @@ const categories: Record<string, Category> = {
   },
   "pittsburgh-steelers": {
     isPrimary: false,
-    name: "Sports and Stadiums",
+    image: Steelers,
+    name: "Steelers",
     description:
       "The Steelers have won six Super Bowl titles and eight American Football Conference (AFC) championships. One of the NFL's most successful and storied franchises, the Steelers have more Super Bowl victories than any other team.",
     options: [
