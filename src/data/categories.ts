@@ -39,6 +39,17 @@ const categories: Record<string, Category> = {
       { name: "Associations by race" },
     ],
   },
+  "learning-and-growth": {
+    name: "Learning and Growth",
+    image: LearningGrowth,
+    description:
+      "Pittsburgh is the 5th best city for STEM professionals says WalletHub.",
+    options: [
+      { name: "Colleges and Universities" },
+      { name: "Research and Labs" },
+      { name: "Professional Associations" },
+    ],
+  },
 };
 
 export default categories;
