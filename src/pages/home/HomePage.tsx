@@ -10,9 +10,11 @@ import {
   GridListTile,
   GridListTileBar,
   Button,
+  List,
+  ListItem,
 } from "@material-ui/core";
 import BulbIcon from "@material-ui/icons/EmojiObjects";
-import { yellow } from "@material-ui/core/colors";
+import { yellow, grey } from "@material-ui/core/colors";
 import ProfessionalDevelopment from "../../images/professional_dev.png";
 import CommuteConnectivity from "../../images/commute_connectivity.png";
 import DiversityInclusion from "../../images/diversity_inclusion.png";
@@ -41,6 +43,28 @@ const menuItems: MenuList[] = [
 const useStyles = makeStyles({
   menuListItem: {},
   menuListImage: {},
+  testimonialsList: {
+    display: "flex",
+    flexDirection: "row",
+    overflowX: "scroll",
+    paddingTop: "64px",
+  },
+  testimonialListItemImage: {
+    height: 120,
+    width: 120,
+    borderRadius: "50%",
+    objectFit: "cover",
+    position: "absolute",
+    top: -60,
+    left: 0,
+    right: 0,
+    marginLeft: "auto",
+    marginRight: "auto",
+    boxShadow: "2px 2px 4px grey",
+  },
+  testimonialsListItem: {
+    minWidth: "80%",
+  },
 });
 
 const HomePage: FunctionComponent = () => {
@@ -87,9 +111,56 @@ const HomePage: FunctionComponent = () => {
             </Box>
           </Button>
         </Box>
-        <Box fontSize={20} fontWeight="fontWeightBold">
+        <Box fontSize={20} fontWeight="fontWeightBold" mb={2}>
           Testimonials
         </Box>
+        <List className={styles.testimonialsList}>
+          <ListItem className={styles.testimonialsListItem}>
+            <Box borderRadius={4} p={2} boxShadow={4} position="relative">
+              <img
+                className={styles.testimonialListItemImage}
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                alt="placeholder"
+              />
+              <Box color={grey[700]} mt={8}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
+              </Box>
+            </Box>
+          </ListItem>
+          <ListItem className={styles.testimonialsListItem}>
+            <Box borderRadius={4} p={2} boxShadow={4} position="relative">
+              <img
+                className={styles.testimonialListItemImage}
+                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                alt="placeholder"
+              />
+              <Box color={grey[700]} mt={8}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
+              </Box>
+            </Box>
+          </ListItem>
+          <ListItem className={styles.testimonialsListItem}>
+            <Box borderRadius={4} p={2} boxShadow={4} position="relative">
+              <img
+                className={styles.testimonialListItemImage}
+                src="https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt="placeholder"
+              />
+              <Box color={grey[700]} mt={8}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
+              </Box>
+            </Box>
+          </ListItem>
+        </List>
       </Container>
     </Box>
   );
