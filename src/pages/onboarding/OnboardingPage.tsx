@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { Box, Button, useTheme, List } from "@material-ui/core";
+import { Box, Button, useTheme } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 import OnboardingPlaceholder from "../../images/onboarding_placeholder.png";
 
