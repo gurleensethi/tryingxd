@@ -42,6 +42,7 @@ const useStyles = makeStyles({
   },
   testimonialsListItem: {
     minWidth: "80%",
+    display: "flex",
   },
 });
 
@@ -89,13 +90,31 @@ const HomePage: FunctionComponent = () => {
         </Box>
         <List className={styles.testimonialsList}>
           <ListItem className={styles.testimonialsListItem}>
-            <Box borderRadius={4} p={2} boxShadow={4} position="relative">
+            <Box
+              borderRadius={4}
+              p={2}
+              boxShadow={4}
+              position="relative"
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center"
+            >
               <img
                 className={styles.testimonialListItemImage}
                 src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
                 alt="placeholder"
               />
-              <Box color={grey[700]} mt={8}>
+              <Box
+                mt={7}
+                fontSize={20}
+                color={grey[900]}
+                mb={1}
+                fontWeight={500}
+              >
+                Jessica Moore
+              </Box>
+              <Box color={grey[700]}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
@@ -104,13 +123,31 @@ const HomePage: FunctionComponent = () => {
             </Box>
           </ListItem>
           <ListItem className={styles.testimonialsListItem}>
-            <Box borderRadius={4} p={2} boxShadow={4} position="relative">
+            <Box
+              borderRadius={4}
+              p={2}
+              boxShadow={4}
+              position="relative"
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center"
+            >
               <img
                 className={styles.testimonialListItemImage}
                 src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
                 alt="placeholder"
               />
-              <Box color={grey[700]} mt={8}>
+              <Box
+                mt={7}
+                fontSize={20}
+                color={grey[900]}
+                mb={1}
+                fontWeight={500}
+              >
+                Rob Martin
+              </Box>
+              <Box color={grey[700]}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
@@ -119,13 +156,31 @@ const HomePage: FunctionComponent = () => {
             </Box>
           </ListItem>
           <ListItem className={styles.testimonialsListItem}>
-            <Box borderRadius={4} p={2} boxShadow={4} position="relative">
+            <Box
+              borderRadius={4}
+              p={2}
+              boxShadow={4}
+              position="relative"
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center"
+            >
               <img
                 className={styles.testimonialListItemImage}
                 src="https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
                 alt="placeholder"
               />
-              <Box color={grey[700]} mt={8}>
+              <Box
+                mt={7}
+                fontSize={20}
+                color={grey[900]}
+                mb={1}
+                fontWeight={500}
+              >
+                Eve
+              </Box>
+              <Box color={grey[700]}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley

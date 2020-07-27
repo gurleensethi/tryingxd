@@ -54,17 +54,35 @@ export const CategoryDetailsPage: FunctionComponent<RouteComponentProps<{
     throw new Error(`Category with id ${categoryId} not found`);
   }
 
+  const height = 200;
+
   return (
     <Box>
-      <AppBar>
-        <Toolbar>
+      <AppBar style={{ height }}>
+        <Toolbar style={{ height, alignItems: "flex-end" }}>
+          <img
+            src={category.image}
+            alt="cover_image"
+            style={{
+              position: "absolute",
+              left: 0,
+              right: 0,
+              zIndex: -1,
+              width: "100%",
+              objectFit: "cover",
+              height,
+              opacity: 0.7,
+            }}
+          />
           <IconButton onClick={handleGoBack}>
             <ArrowBack htmlColor="white" />
           </IconButton>
-          <Typography variant="h6">{category.name}</Typography>
+          <Box fontSize={20} mb={1.5}>
+            {category.name}
+          </Box>
         </Toolbar>
       </AppBar>
-      <Toolbar />
+      <Toolbar style={{ height }} />
       <Container>
         <InfoBox text={category.description} />
         <List>
