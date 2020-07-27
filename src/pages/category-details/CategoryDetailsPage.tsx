@@ -69,8 +69,17 @@ export const CategoryDetailsPage: FunctionComponent<RouteComponentProps<{
         <InfoBox text={category.description} />
         <List>
           {category.options.map((option) => (
-            <ListItem>
-              <Button variant="contained" fullWidth color="primary">
+            <ListItem key={option.name}>
+              <Button
+                variant="contained"
+                fullWidth
+                color="primary"
+                onClick={() => {
+                  if (option.category) {
+                    history.push(`/category/${option.category}`);
+                  }
+                }}
+              >
                 <Box p={1} fontSize={16}>
                   {option.name}
                 </Box>

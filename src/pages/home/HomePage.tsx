@@ -60,20 +60,22 @@ const HomePage: FunctionComponent = () => {
       <Container>
         <InfoBox text="Pittsburgh has recently been ranked 2nd most livable city in the US." />
         <GridList>
-          {Object.keys(categories).map((key) => {
-            const category = categories[key];
-            return (
-              <GridListTile key={key}>
-                <img
-                  src={category.image}
-                  alt="icon_image"
-                  className={styles.menuListImage}
-                  onClick={() => history.push(`category/${key}`)}
-                />
-                <GridListTileBar key={12} title={category.name} />
-              </GridListTile>
-            );
-          })}
+          {Object.keys(categories)
+            .filter((key) => categories[key].isPrimary)
+            .map((key) => {
+              const category = categories[key];
+              return (
+                <GridListTile key={key}>
+                  <img
+                    src={category.image}
+                    alt="icon_image"
+                    className={styles.menuListImage}
+                    onClick={() => history.push(`/category/${key}`)}
+                  />
+                  <GridListTileBar key={12} title={category.name} />
+                </GridListTile>
+              );
+            })}
         </GridList>
         <Box my={4}>
           <Button variant="contained" fullWidth color="primary">

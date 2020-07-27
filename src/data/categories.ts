@@ -13,17 +13,20 @@ import TechCouncil from "../images/tech_council.png";
 
 export interface Category {
   name: string;
-  image: string;
+  image?: string;
   description: string;
   options: {
     name: string;
+    category?: string;
   }[];
   galleryImages?: string[];
   iconImages?: string[];
+  isPrimary: boolean;
 }
 
 const categories: Record<string, Category> = {
   "professional-development": {
+    isPrimary: true,
     name: "Professional Development",
     image: ProfessionalDevelopment,
     description:
@@ -35,6 +38,7 @@ const categories: Record<string, Category> = {
     ],
   },
   "diversity-and-inclusion": {
+    isPrimary: true,
     name: "Diversity and Inclusion",
     image: DiversityInclusion,
     description:
@@ -46,6 +50,7 @@ const categories: Record<string, Category> = {
     ],
   },
   "learning-and-growth": {
+    isPrimary: true,
     name: "Learning and Growth",
     image: LearningGrowth,
     description:
@@ -58,6 +63,7 @@ const categories: Record<string, Category> = {
     galleryImages: [TechCouncil],
   },
   recreation: {
+    isPrimary: true,
     name: "Recreation",
     image: Recreation,
     description:
@@ -65,12 +71,13 @@ const categories: Record<string, Category> = {
     options: [
       { name: "Parks and Trails" },
       { name: "Fishing and Boating" },
-      { name: "Sports and Stadium" },
+      { name: "Sports and Stadium", category: "sports-and-stadiums" },
       { name: "Gaming and Casinos" },
       { name: "Live Events" },
     ],
   },
   Neighborhood: {
+    isPrimary: true,
     name: "Neighborhood",
     image: Neighborhood,
     description:
@@ -85,6 +92,7 @@ const categories: Record<string, Category> = {
     ],
   },
   "Work-life-balance": {
+    isPrimary: true,
     name: "Work Life Balance",
     image: WorkBalance,
     description: "Smartasset ranks Pittsburgh 22nd for work life balance.",
@@ -95,6 +103,7 @@ const categories: Record<string, Category> = {
     ],
   },
   "health-and-wellness": {
+    isPrimary: true,
     name: "Health and Wellness",
     image: HealthWellness,
     description:
@@ -108,12 +117,25 @@ const categories: Record<string, Category> = {
     ],
   },
   "commute-and-connectivity": {
+    isPrimary: true,
     name: "Commute and Connectivity",
     image: CommuteConnectivity,
     description:
       "People for Bikes named Pittsburgh among the top 20 cities in the United States for people on bicycles.",
     options: [{ name: "Apps making commute easier" }],
     iconImages: [Uber, Lyft, Transit],
+  },
+  "sports-and-stadiums": {
+    isPrimary: false,
+    name: "Sports and Stadiums",
+    description:
+      "People for Bikes named Pittsburgh among the top 20 cities in the United States for people on bicycles.",
+    options: [
+      { name: "Steelers" },
+      { name: "Penguins" },
+      { name: "Pirates" },
+      { name: "Stadiums" },
+    ],
   },
 };
 
