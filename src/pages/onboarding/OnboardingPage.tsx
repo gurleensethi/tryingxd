@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react";
-import { Box, Button, useTheme } from "@material-ui/core";
+import { Box, Button, useTheme, List } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
+import OnboardingPlaceholder from "../../images/onboarding_placeholder.png";
 
 const OnboardingPage: FunctionComponent = () => {
   const theme = useTheme();
@@ -19,8 +20,14 @@ const OnboardingPage: FunctionComponent = () => {
       p={2}
       height="100%"
     >
-      <Box flex="1"></Box>
-      <Box fontSize={32}>44</Box>
+      <Box>
+        <img
+          src={OnboardingPlaceholder}
+          alt="placeholder"
+          style={{ objectFit: "fill" }}
+        />
+      </Box>
+      <Box fontSize={40}>44</Box>
       <Box
         color={theme.palette.primary.main}
         mb={4}
@@ -28,6 +35,7 @@ const OnboardingPage: FunctionComponent = () => {
         fontWeight="fontWeightLight"
         px={4}
         mt={1}
+        textAlign="center"
       >
         Connections Welcome you to the City of Bridges.
       </Box>
