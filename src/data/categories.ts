@@ -6,6 +6,10 @@ import LearningGrowth from "../images/learning_growth.png";
 import Neighborhood from "../images/neighborhood.png";
 import Recreation from "../images/recreation.png";
 import WorkBalance from "../images/work_balance.png";
+import Transit from "../images/transit.png";
+import Uber from "../images/uber.png";
+import Lyft from "../images/lyft.jpg";
+import TechCouncil from "../images/tech_council.png";
 
 export interface Category {
   name: string;
@@ -14,6 +18,8 @@ export interface Category {
   options: {
     name: string;
   }[];
+  galleryImages?: string[];
+  iconImages?: string[];
 }
 
 const categories: Record<string, Category> = {
@@ -49,8 +55,9 @@ const categories: Record<string, Category> = {
       { name: "Research and Labs" },
       { name: "Professional Associations" },
     ],
+    galleryImages: [TechCouncil],
   },
-  "recreation": {
+  recreation: {
     name: "Recreation",
     image: Recreation,
     description:
@@ -59,11 +66,11 @@ const categories: Record<string, Category> = {
       { name: "Parks and Trails" },
       { name: "Fishing and Boating" },
       { name: "Sports and Stadium" },
-      { name: "Gaming and Casinos"},
-      { name: "Live Events"},
+      { name: "Gaming and Casinos" },
+      { name: "Live Events" },
     ],
   },
-  "Neighborhood": {
+  Neighborhood: {
     name: "Neighborhood",
     image: Neighborhood,
     description:
@@ -72,43 +79,41 @@ const categories: Record<string, Category> = {
       { name: "Housing and Accomodation" },
       { name: "Safety Index" },
       { name: "Grocery Store" },
-      { name: "Shopping Malls"},
-      { name: "Food and Breweries"},
-      { name: "Community Services"},
+      { name: "Shopping Malls" },
+      { name: "Food and Breweries" },
+      { name: "Community Services" },
     ],
   },
   "Work-life-balance": {
     name: "Work Life Balance",
     image: WorkBalance,
-    description:
-      "Smartasset ranks Pittsburgh 22nd for work life balance.",
+    description: "Smartasset ranks Pittsburgh 22nd for work life balance.",
     options: [
       { name: "Kid's Education" },
       { name: "Family Outings" },
       { name: "Calculate your happiness Index" },
     ],
   },
-  "health-and-wellness":{
+  "health-and-wellness": {
     name: "Health and Wellness",
     image: HealthWellness,
     description:
-    "People for Bikes named Pittsburgh is celebrated as the 5th Best City for an active lifestyle as named by WalletHub among the top 20 cities in the United States for people on bicycles.",
-    options:[
+      "People for Bikes named Pittsburgh is celebrated as the 5th Best City for an active lifestyle as named by WalletHub among the top 20 cities in the United States for people on bicycles.",
+    options: [
       { name: "Hospitals" },
       { name: "Mental Health Centers" },
       { name: "Meditation Centres" },
-      { name: "Fitness Centers"},
-      { name: "Exercising Groups"},
+      { name: "Fitness Centers" },
+      { name: "Exercising Groups" },
     ],
   },
-  "commute-and-connectivity":{
+  "commute-and-connectivity": {
     name: "Commute and Connectivity",
     image: CommuteConnectivity,
     description:
-    "People for Bikes named Pittsburgh among the top 20 cities in the United States for people on bicycles.",
-    options:[
-      { name: "Apps making commute easier" },
-    ],
+      "People for Bikes named Pittsburgh among the top 20 cities in the United States for people on bicycles.",
+    options: [{ name: "Apps making commute easier" }],
+    iconImages: [Uber, Lyft, Transit],
   },
 };
 

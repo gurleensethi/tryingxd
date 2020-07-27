@@ -9,16 +9,36 @@ import {
   List,
   ListItem,
   IconButton,
+  makeStyles,
 } from "@material-ui/core";
 import { RouteComponentProps, useHistory } from "react-router-dom";
 import categories from "../../data/categories";
 import InfoBox from "../../components/info-box/InfoBox";
 import ArrowBack from "@material-ui/icons/ArrowBack";
 
+const useStyles = makeStyles({
+  galleryImages: {
+    display: "flex",
+    overflowX: "scroll",
+  },
+  galleryImageItem: {
+    height: 200,
+    marginRight: 16,
+  },
+  iconImages: {
+    display: "flex",
+    flexWrap: "wrap",
+  },
+  iconImageItem: {
+    height: 80,
+  },
+});
+
 export const CategoryDetailsPage: FunctionComponent<RouteComponentProps<{
   categoryId: string;
 }>> = ({ match }) => {
   const history = useHistory();
+  const styles = useStyles();
 
   const {
     params: { categoryId },
@@ -57,6 +77,22 @@ export const CategoryDetailsPage: FunctionComponent<RouteComponentProps<{
               </Button>
             </ListItem>
           ))}
+        </List>
+        <List className={styles.galleryImages}>
+          {category.galleryImages &&
+            category.galleryImages.map((image) => (
+              <img
+                src={image}
+                alt="gallery"
+                className={styles.galleryImageItem}
+              />
+            ))}
+        </List>
+        <List className={styles.iconImages}>
+          {category.iconImages &&
+            category.iconImages.map((image) => (
+              <img src={image} alt="gallery" className={styles.iconImageItem} />
+            ))}
         </List>
       </Container>
     </Box>
