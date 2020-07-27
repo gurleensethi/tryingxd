@@ -131,10 +131,22 @@ const categories: Record<string, Category> = {
     description:
       "People for Bikes named Pittsburgh among the top 20 cities in the United States for people on bicycles.",
     options: [
-      { name: "Steelers" },
+      { name: "Steelers", category: "pittsburgh-steelers" },
       { name: "Penguins" },
       { name: "Pirates" },
       { name: "Stadiums" },
+    ],
+  },
+  "pittsburgh-steelers": {
+    isPrimary: false,
+    name: "Sports and Stadiums",
+    description:
+      "The Steelers have won six Super Bowl titles and eight American Football Conference (AFC) championships. One of the NFL's most successful and storied franchises, the Steelers have more Super Bowl victories than any other team.",
+    options: [
+      { name: "History" },
+      { name: "Team" },
+      { name: "Game Schedule (Buy Tickets)" },
+      { name: "Buy Merchandise" },
     ],
   },
 };
