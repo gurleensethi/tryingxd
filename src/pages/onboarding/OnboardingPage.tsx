@@ -2,6 +2,7 @@ import React, { FunctionComponent } from "react";
 import { Box, Button, useTheme } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 import OnboardingPlaceholder from "../../images/onboarding_placeholder.png";
+import NetworkingImage from "../../images/networkingImage.png";
 
 const OnboardingPage: FunctionComponent = () => {
   const theme = useTheme();
@@ -27,12 +28,20 @@ const OnboardingPage: FunctionComponent = () => {
           style={{ objectFit: "fill" }}
         />
       </Box>
-      <Box fontSize={40}>44
-      {/* <img
-        src = {networkingImage}
-        height = "50%"
-        width = "25%"
-      /> */}
+      <Box
+        fontSize={40}
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        my={2}
+      >
+        <Box mr={1}>44</Box>
+        <img
+          src={NetworkingImage}
+          height="64px"
+          width="64xp"
+          alt="placeholder_image"
+        />
       </Box>
       <Box
         color={theme.palette.primary.main}

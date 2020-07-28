@@ -18,7 +18,7 @@ const InfoBox: FunctionComponent<Props> = ({ text }) => {
           Did you know
         </Box>
       </Box>
-      <Box>{text}</Box>
+      <Box fontSize={20}>{text}</Box>
     </Box>
   );
 };
