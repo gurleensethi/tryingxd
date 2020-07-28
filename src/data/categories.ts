@@ -69,7 +69,7 @@ const categories: Record<string, Category> = {
     name: "Recreation",
     image: Recreation,
     description:
-      "Kennywood won the Favorite  Traditional Parks category in The Annual Amusements Parks and Attractions Survey.",
+      "Kennywood amusement park has won the Favorite Traditional Parks category in The Annual Amusements Parks and Attractions Survey.",
     options: [
       { name: "Parks and Trails" },
       { name: "Fishing and Boating" },

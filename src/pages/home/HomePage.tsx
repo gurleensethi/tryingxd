@@ -115,10 +115,7 @@ const HomePage: FunctionComponent = () => {
                 Jessica Moore
               </Box>
               <Box color={grey[700]}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+              We moved to the city because we wanted to be in the epicenter of Pittsburgh.  Living downtown has allowed us to be spoiled by the convenience factor and amount of activities in downtown.  We walk every day, take buses when necessary to Pitt or CMU, and have a car for emergencies.  We would tell anyone considering moving downtown to – ‘Just do it!
               </Box>
             </Box>
           </ListItem>
@@ -148,10 +145,7 @@ const HomePage: FunctionComponent = () => {
                 Rob Martin
               </Box>
               <Box color={grey[700]}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+              My husband and I moved from Boston to Pittsburgh in 2000 to launch AlphaGraphics in the Cultural District.  Wanting to be close to our business, we were drawn to The Pennsylvanian for downtown living and the opportunity to be a part of the growing vitality of the arts and restaurant scene that was about to explode in the area.
               </Box>
             </Box>
           </ListItem>
@@ -181,10 +175,7 @@ const HomePage: FunctionComponent = () => {
                 Eve
               </Box>
               <Box color={grey[700]}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+              Downtown Pittsburgh is right now in the midst of the most impressive renaissance I have ever witnessed.  It is so exciting and I am so hopeful about this City’s future that I am in the process of trying to open a hardware store down here. 
               </Box>
             </Box>
           </ListItem>
